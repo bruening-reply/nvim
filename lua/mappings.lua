@@ -5,6 +5,10 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
+
+vim.keymap.set("n", "<leader>t", function()
+  require("nvchad.term").toggle { pos = "float" }
+end, { desc = "Toggle floating terminal" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
