@@ -7,12 +7,13 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jj", "<ESC>")
 
-vim.keymap.set("n", "<leader>t", function()
+map("n", "<leader>t", function()
   require("nvchad.term").toggle { pos = "float" }
 end, { desc = "Toggle floating terminal" })
 
 map("n", "<leader>p", "<cmd>Telescope commands<CR>", {
   desc = "Command Palette",
 })
+
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
