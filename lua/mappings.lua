@@ -11,4 +11,8 @@ vim.keymap.set("n", "<leader>t", function()
   require("nvchad.term").toggle { pos = "float" }
 end, { desc = "Toggle floating terminal" })
 
+map("n", "<leader>p", "<cmd>Telescope commands<CR>", {
+  desc = "Command Palette",
+})
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
